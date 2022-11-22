@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Manino",
-  "version": "1.2",
+  "version": "1.1",
   "author": "Vinyl Smyk",
   "files": [
     {
@@ -577,6 +577,61 @@
     {
       "projectID": 475964,
       "fileID": 3871367,
+      "required": true
+    },
+    {
+      "projectID": 560323,
+      "fileID": 3665605,
+      "required": true
+    },
+    {
+      "projectID": 391366,
+      "fileID": 4066569,
+      "required": true
+    },
+    {
+      "projectID": 401236,
+      "fileID": 3756730,
+      "required": true
+    },
+    {
+      "projectID": 560657,
+      "fileID": 3860894,
+      "required": true
+    },
+    {
+      "projectID": 648676,
+      "fileID": 3934889,
+      "required": true
+    },
+    {
+      "projectID": 682213,
+      "fileID": 4097943,
+      "required": true
+    },
+    {
+      "projectID": 543089,
+      "fileID": 4081794,
+      "required": true
+    },
+    {
+      "projectID": 498794,
+      "fileID": 4022307,
+      "required": true
+    },
+    {
+      "projectID": 541171,
+      "fileID": 4081453,
+      "required": true
+    },
+    {
+      "projectID": 306549,
+      "fileID": 4068903,
+      "required": true
+    },
+    {
+      "projectID": 542196,
+      "fileID": 3896027,
       "required": true
     }
   ],
