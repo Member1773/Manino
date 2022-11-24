@@ -1,6 +1,12 @@
 #!/bin/bash
 session=$1
 
+checkIfRunning() {
+  if ! pgrep -f 'java.*minecraft_server\.jar' > /dev/null;then
+    tmux kill-session
+  fi
+}
+
 while [ true ]; do
   sleep 3.5h
   checkIfRunning
@@ -11,12 +17,14 @@ while [ true ]; do
   tmux send-keys -t ${session}:0  "say Server restarts in 5 minutes" Enter
 
   sleep 5m
+  for i in 10 9 8 7 6 5 4 3 2 1; do
+    tmux send-keys -t ${session}:0 "say Server restarting in ${i}..." Enter
+    sleep 1
+  done
+
+  tmux send-keys -t ${session}:0 "say Server restarting!" Enter
+  sleep 5
+
   checkIfRunning
   tmux send-keys -t ${session}:0  "stop" Enter
 done
-
-checkIfRunning() {
-  if ! pgrep -f 'java.*minecraft_server\.jar' > /dev/null;then
-    tmux kill-session
-  fi
-}

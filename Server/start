@@ -18,12 +18,12 @@ fi
 tmux new-session -d -s $daemon  -c /home/bigload/serverfiles
 tmux new-session -d -s $session -c /home/bigload/serverfiles
 sleep 1
-for i in 5 4 3 2 1; do
+for i in 3 2 1; do
         printf 'Server starting in %s... (press CTRL-C to cancel)\n' "${i}"
         sleep 1
     done
 tmux send-keys -t ${session}:0 ./manino Enter
-tmux send-keys -t ${daemon}:0  "./autorestart $session" Enter
+tmux send-keys -t ${daemon}:0  "./restart $session" Enter
 
 # Attach to created session
 tmux attach-session -t $session
